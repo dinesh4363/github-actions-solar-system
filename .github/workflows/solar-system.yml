@@ -49,8 +49,11 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install NodeJs Dependencies
-        run: npm install
+      - name: Cache NPM dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
       - name: Run Code coverage
         run: npm run coverage
