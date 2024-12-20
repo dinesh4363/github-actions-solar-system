@@ -19,8 +19,6 @@ jobs:
         name: Unit Testing
         runs-on: ubuntu-latest
         steps:
-        - name: List docker process
-          run: docker ps
         - name: Checkout Repository
           uses: actions/checkout@v4
 
