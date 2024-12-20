@@ -95,4 +95,4 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: ghcr.io/dinesh4363/solar-system:{{ github.sha }}
+          tags: ghcr.io/dinesh4363/solar-system:${{ github.sha }}
